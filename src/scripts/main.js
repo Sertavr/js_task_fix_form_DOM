@@ -1,6 +1,6 @@
 'use strict';
 
-const collectionInputs = document.querySelectorAll('input');
+const collectionInputs = document.querySelectorAll('form input');
 const inputs = Array.from(collectionInputs);
 const collectionDivField = document.querySelectorAll('.field');
 
@@ -33,7 +33,7 @@ collectionDivField.forEach((fied, ind) => {
 
   labelEl.setAttribute('for', idInput);
   labelEl.classList.add('field-label');
-  labelEl.textContent = nameImput;
+  labelEl.textContent = modifiesString(nameImput);
 
   fied.insertAdjacentElement('afterbegin', labelEl);
 });
